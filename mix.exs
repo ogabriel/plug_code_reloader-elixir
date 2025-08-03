@@ -33,7 +33,8 @@ defmodule PlugCodeReloader.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:plug, "~> 1.18"}
+      {:plug, "~> 1.18"},
+      {:credo, "~> 1.7", only: [:dev, :test], runtime: false}
     ]
   end
 end
