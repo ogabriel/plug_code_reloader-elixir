@@ -27,7 +27,7 @@ plug(PlugCodeReloader)
 
 On your `application.ex`
 
-```
+```elixir
 children = [
   # Code reloading must be serial across all Phoenix apps
   PlugCodeReloader.Server,
