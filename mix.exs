@@ -24,6 +24,14 @@ defmodule PlugCodeReloader.MixProject do
         plt_add_apps: [:mix],
         plt_core_path: "_build/plts/core",
         plt_local_path: "_build/plts/local"
+      ],
+      test_coverage: [tool: ExCoveralls],
+      preferred_cli_env: [
+        coveralls: :test,
+        "coveralls.detail": :test,
+        "coveralls.post": :test,
+        "coveralls.html": :test,
+        "coveralls.cobertura": :test
       ]
     ]
   end
@@ -40,7 +48,8 @@ defmodule PlugCodeReloader.MixProject do
     [
       {:plug, "~> 1.18"},
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
-      {:dialyxir, "~> 1.3", only: [:dev], runtime: false}
+      {:dialyxir, "~> 1.3", only: [:dev], runtime: false},
+      {:excoveralls, "~> 0.18", only: :test}
     ]
   end
 end
