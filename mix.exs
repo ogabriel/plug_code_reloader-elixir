@@ -19,7 +19,12 @@ defmodule PlugCodeReloader.MixProject do
         licenses: ["MIT"],
         links: %{"GitHub" => "https://github.com/ogabriel/plug_code_reloader-elixir"}
       ],
-      description: "Plug to code reload"
+      description: "Plug to code reload",
+      dialyzer: [
+        plt_add_apps: [:mix],
+        plt_core_path: "_build/plts/core",
+        plt_local_path: "_build/plts/local"
+      ]
     ]
   end
 
@@ -34,7 +39,8 @@ defmodule PlugCodeReloader.MixProject do
   defp deps do
     [
       {:plug, "~> 1.18"},
-      {:credo, "~> 1.7", only: [:dev, :test], runtime: false}
+      {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
+      {:dialyxir, "~> 1.3", only: [:dev], runtime: false}
     ]
   end
 end
