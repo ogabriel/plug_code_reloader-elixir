@@ -4,7 +4,6 @@ defmodule PlugCodeReloader do
   """
 
   @behaviour Plug
-  import Plug.Conn
 
   @impl true
   def init(opts) do

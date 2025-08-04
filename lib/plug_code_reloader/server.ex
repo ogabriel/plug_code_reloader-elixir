@@ -23,7 +23,7 @@ defmodule PlugCodeReloader.Server do
         GenServer.start_link(__MODULE__, :ok, name: __MODULE__)
 
       _ ->
-        Logger.warn("Mix.Task not available, code reloading will not work")
+        Logger.warning("Mix.Task not available, code reloading will not work")
         :ignore
     end
   end
