@@ -22,16 +22,29 @@ Documentation can be found at <https://hexdocs.pm/plug_code_reloader>.
 On your routes file
 
 ```elixir
-plug(PlugCodeReloader)
+  if Mix.env() == :dev do
+    plug(PlugCodeReloader)
+  end
 ```
 
 On your `application.ex`
 
 ```elixir
-children = [
-  # Code reloading must be serial across all Phoenix apps
-  PlugCodeReloader.Server,
-]
+    children = [
+        ...
+    ]
+
+    add_code_reloader(children)
+```
+
+```elixir
+defp add_code_reloader(children) do
+    if Mix.env() == :dev do
+        [PlugCodeReloader | children]
+    else
+        children
+    end
+end
 ```
 
 ## Limitations
