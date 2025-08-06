@@ -22,7 +22,7 @@ Documentation can be found at <https://hexdocs.pm/plug_code_reloader>.
 On your routes file
 
 ```elixir
-  if Mix.env() == :dev do
+  if Code.ensure_loaded?(Mix) && Mix.env() == :dev do
     plug(PlugCodeReloader)
   end
 ```
@@ -39,8 +39,8 @@ On your `application.ex`
 
 ```elixir
 defp add_code_reloader(children) do
-    if Mix.env() == :dev do
-        [PlugCodeReloader | children]
+    if Code.ensure_loaded?(Mix) && Mix.env() == :dev do
+        [PlugCodeReloader.Server | children]
     else
         children
     end
