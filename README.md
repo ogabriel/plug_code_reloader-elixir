@@ -34,7 +34,7 @@ On your `application.ex`
         ...
     ]
 
-    add_code_reloader(children)
+    children = add_code_reloader(children)
 ```
 
 ```elixir
