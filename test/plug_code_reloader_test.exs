@@ -1,5 +1,6 @@
 defmodule PlugCodeReloaderTest do
   use ExUnit.Case, async: true
+
   import Plug.Test
 
   defmodule MyRouter do
