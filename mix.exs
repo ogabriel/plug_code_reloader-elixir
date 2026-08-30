@@ -5,7 +5,7 @@ defmodule PlugCodeReloader.MixProject do
     [
       app: :plug_code_reloader,
       version: "0.1.1",
-      elixir: "~> 1.12",
+      elixir: "> 0.0.0",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       source_url: "https://github.com/ogabriel/plug_code_reloader-elixir",
@@ -46,7 +46,7 @@ defmodule PlugCodeReloader.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:plug, "~> 1.18"},
+      {:plug, "> 0.0.0"},
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.3", only: [:dev], runtime: false},
       {:excoveralls, "~> 0.18", only: :test},
