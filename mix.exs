@@ -4,7 +4,7 @@ defmodule PlugCodeReloader.MixProject do
   def project do
     [
       app: :plug_code_reloader,
-      version: "0.1.1",
+      version: "0.1.2",
       elixir: "> 1.11.0",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
