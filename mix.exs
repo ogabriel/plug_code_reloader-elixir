@@ -5,7 +5,7 @@ defmodule PlugCodeReloader.MixProject do
     [
       app: :plug_code_reloader,
       version: "0.1.1",
-      elixir: "> 0.0.0",
+      elixir: "> 1.11.0",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       source_url: "https://github.com/ogabriel/plug_code_reloader-elixir",
