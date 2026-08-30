@@ -8,23 +8,7 @@ defmodule PlugCodeReloader.MixProject do
       elixir: "> 1.11.0",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-      source_url: "https://github.com/ogabriel/plug_code_reloader-elixir",
-      docs: [
-        main: "plug_code_reloader",
-        extras: ["README.md", "LICENSE"]
-      ],
-      package: [
-        name: "plug_code_reloader",
-        files: ~w(lib .formatter.exs mix.exs README* LICENSE*),
-        licenses: ["MIT"],
-        links: %{"GitHub" => "https://github.com/ogabriel/plug_code_reloader-elixir"}
-      ],
-      description: "Plug to code reload",
-      dialyzer: [
-        plt_add_apps: [:mix],
-        plt_core_path: "_build/plts/core",
-        plt_local_path: "_build/plts/local"
-      ],
+      # Coveralls
       test_coverage: [tool: ExCoveralls],
       preferred_cli_env: [
         coveralls: :test,
@@ -32,7 +16,22 @@ defmodule PlugCodeReloader.MixProject do
         "coveralls.post": :test,
         "coveralls.html": :test,
         "coveralls.cobertura": :test
-      ]
+      ],
+      dialyzer: [
+        plt_add_apps: [:mix],
+        plt_core_path: "_build/plts/core",
+        plt_local_path: "_build/plts/local"
+      ],
+      # ExDocs
+      name: "plug_code_reloader",
+      source_url: "https://github.com/ogabriel/plug_code_reloader-elixir",
+      docs: [
+        main: "PlugCodeReloader",
+        extras: ["README.md", "LICENSE"]
+      ],
+      description: "Plug to code reload",
+      # Hex.pm
+      package: package()
     ]
   end
 
@@ -51,6 +50,15 @@ defmodule PlugCodeReloader.MixProject do
       {:dialyxir, "~> 1.3", only: [:dev], runtime: false},
       {:excoveralls, "~> 0.18", only: :test},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
+    ]
+  end
+
+  defp package do
+    [
+      name: "plug_code_reloader",
+      files: ~w(lib .formatter.exs mix.exs README* LICENSE*),
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/ogabriel/plug_code_reloader-elixir"}
     ]
   end
 end
