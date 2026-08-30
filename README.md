@@ -1,6 +1,6 @@
 # PlugCodeReloader
 
-[![Build Status](https://github.com/ogabriel/plug_code_realoader-elixir/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/ogabriel/plug_code_realoader-elixir/actions) [![Hex.pm](https://img.shields.io/hexpm/v/plug-code-reloader.svg)](https://hex.pm/packages/plug-code-reloader) [![Documentation](https://img.shields.io/badge/documentation-gray)](https://hexdocs.pm/plug-code-reloader/)
+[![Build Status](https://github.com/ogabriel/plug_code_reloader-elixir/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/ogabriel/plug_code_reloader-elixir/actions) [![Hex.pm](https://img.shields.io/hexpm/v/plug_code_reloader.svg)](https://hex.pm/packages/plug_code_reloader) [![Documentation](https://img.shields.io/badge/documentation-gray)](https://hexdocs.pm/plug_code_reloader/)
 
 Library that allows you to reload your code on every request in development mode, without the need to restart your server.
 
