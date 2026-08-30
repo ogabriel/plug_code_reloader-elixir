@@ -1,6 +1,6 @@
 # PlugCodeReloader
 
-**TODO: Add description**
+Library that allows you to reload your code on every request in development mode, without the need to restart your server.
 
 ## Installation
 
